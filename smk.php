@@ -1,21 +1,31 @@
 <?php
-// for ($i=1; $i<=12; $i++){
-//     echo $i;
+$nama=array("joni", "tojo", "budi", "siti", 100,2.5);
+var_dump($nama);
+echo "<br>";
+echo $nama[5];
+echo "<br>";
+// for($i=0; $i< 6; $i++){
+//      echo $nama[$i]."<br>";
 // }
-
-// for($i=12; $i>=1; $i=$i-2){
-//     echo $i. ',';
+// foreach ($nama as $k){
+//     echo $k.'<br>';
 // }
-
-// $a=1;
-// while($a<=10){
-//     echo $a. ',';
-//     $a++;
-// }
-
-$a=1;
-do{
-    echo $a. ',';
-    $a++;
-} while ($a<=100);
+$nama=array(
+    "joni"=>"surabaya",
+    "budi"=>"malang",
+    "tojo"=>"jakarta",
+    "siti"=>"sidoarjo"
+);
+$nama["joni"]="surabaya";
+$nama["budi"]="malang";
+$nama["tojo"]="jakarta";
+$nama["siti"]="sidoarjo";
+$nama["edi"]="semarang";
+var_dump($nama);
+echo"<br>";
+echo $nama['budi'];
+foreach ($nama as $key =>$value){
+    echo $key."=>".$value;
+    echo "<br>";
+}
 ?>
