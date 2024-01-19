@@ -1,33 +1,21 @@
 <?php
-$hari=4;
-// switch($hari){
-//     case 1:
-//         echo 'minggu';
-//         break;
-//         case 2:
-//             echo 'senin';
-//             break;
-//             case 3:
-//                 echo 'selasa';
-//                 break;
-//                 default:
-//                     echo 'hari belum dibuat';
-//                     break;
+// for ($i=1; $i<=12; $i++){
+//     echo $i;
 // }
 
-$pilihan='simpan';
-switch ($pilihan){
-    case 'tambah':
-        echo 'anda memilih tambah';
-        break;
-        case 'hapus':
-            echo 'anda memilih hapus';
-            break;
-            case 'ubah':
-                echo 'anda memilih ubah';
-                break;
-                default:
-                    echo 'pilihan belum ada';
-                    break;
-}
+// for($i=12; $i>=1; $i=$i-2){
+//     echo $i. ',';
+// }
+
+// $a=1;
+// while($a<=10){
+//     echo $a. ',';
+//     $a++;
+// }
+
+$a=1;
+do{
+    echo $a. ',';
+    $a++;
+} while ($a<=100);
 ?>
