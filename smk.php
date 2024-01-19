@@ -1,10 +1,17 @@
 <?php
-$tulisan = ' saya belajar php';
-echo $tulisan.'<br>';
-$angka ='2019';
-echo 'tahun'.$angka.'<br>';
-var_dump($tulisan);
-echo'<br>';
-var_dump((int)$angka+2);
-
+function belajar(){
+    echo "saya belajar php";
+}
+function luasPersegi($p = 5, $p1 = 3){
+    $luas=$p*$p1;
+    echo $luas;
+}
+function luas($p=5, $p1=3){
+    $luas=$p*$p1;
+    return $luas;
+}
+function output(){
+    return "belajar function";
+}
+echo luas(100, 3) * 5;
 ?>
