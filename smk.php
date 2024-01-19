@@ -1,32 +1,29 @@
 <?php
-$a=6;
-$b=8;
-$c=$a+$b;
-echo $c.'<br>';
-$c=$a-$b;
-echo $c.'<br>';
-$c=$a*$b;
-echo $c.'<br>';
-$c=$a/$b;
-echo  $c.'<br>';
-$c=$a%$b;
-echo $c;
+$tanggal=0;
+// if ($tanggal<32){
+//     if($tanggal>0){
+//         echo 'benar';
+//     } else {
+//         echo 'salah';
+//     }
+// }  else{
+//     echo 'salah';
+// }
 
-$c=$a<$b;
-echo $c;
-$c=$a>$b;
-echo $c;
-$c=$a==$b;
-echo $c;
-$c=$a!=$b;
-echo $c.'<br>';
+$nilai=4;
+// if($nilai<=100){
+//     if($nilai>=0){
+//     echo 'nilai benar';
+// } else{
+//     echo 'nilai salah';
+//      }
+//     }else{
+//     echo 'nilai salah';
+// }
 
-$a++;
-echo $a.'<br>';
-
-$kata='sura';
-$kota='baya';
-$hasil=$kata.$kota;
-$hasil.='kota pahlawan';
-echo $hasil;
+if($nilai>=100 || $nilai<=0){
+    echo 'nilai salah';
+} else {
+    echo 'nilai benar';
+}
 ?>
