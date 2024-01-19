@@ -1,29 +1,33 @@
 <?php
-$tanggal=0;
-// if ($tanggal<32){
-//     if($tanggal>0){
-//         echo 'benar';
-//     } else {
-//         echo 'salah';
-//     }
-// }  else{
-//     echo 'salah';
+$hari=4;
+// switch($hari){
+//     case 1:
+//         echo 'minggu';
+//         break;
+//         case 2:
+//             echo 'senin';
+//             break;
+//             case 3:
+//                 echo 'selasa';
+//                 break;
+//                 default:
+//                     echo 'hari belum dibuat';
+//                     break;
 // }
 
-$nilai=4;
-// if($nilai<=100){
-//     if($nilai>=0){
-//     echo 'nilai benar';
-// } else{
-//     echo 'nilai salah';
-//      }
-//     }else{
-//     echo 'nilai salah';
-// }
-
-if($nilai>=100 || $nilai<=0){
-    echo 'nilai salah';
-} else {
-    echo 'nilai benar';
+$pilihan='simpan';
+switch ($pilihan){
+    case 'tambah':
+        echo 'anda memilih tambah';
+        break;
+        case 'hapus':
+            echo 'anda memilih hapus';
+            break;
+            case 'ubah':
+                echo 'anda memilih ubah';
+                break;
+                default:
+                    echo 'pilihan belum ada';
+                    break;
 }
 ?>
