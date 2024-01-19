@@ -1,17 +1,32 @@
 <?php
-function belajar(){
-    echo "saya belajar php";
-}
-function luasPersegi($p = 5, $p1 = 3){
-    $luas=$p*$p1;
-    echo $luas;
-}
-function luas($p=5, $p1=3){
-    $luas=$p*$p1;
-    return $luas;
-}
-function output(){
-    return "belajar function";
-}
-echo luas(100, 3) * 5;
+$a=6;
+$b=8;
+$c=$a+$b;
+echo $c.'<br>';
+$c=$a-$b;
+echo $c.'<br>';
+$c=$a*$b;
+echo $c.'<br>';
+$c=$a/$b;
+echo  $c.'<br>';
+$c=$a%$b;
+echo $c;
+
+$c=$a<$b;
+echo $c;
+$c=$a>$b;
+echo $c;
+$c=$a==$b;
+echo $c;
+$c=$a!=$b;
+echo $c.'<br>';
+
+$a++;
+echo $a.'<br>';
+
+$kata='sura';
+$kota='baya';
+$hasil=$kata.$kota;
+$hasil.='kota pahlawan';
+echo $hasil;
 ?>
