@@ -1,16 +1,11 @@
 <nav>
     <ul>
-        <li>kontak</li>
-        <li>akun</li>
-        <li>pribadi</li>
-    </ul>
+        <li><a href="?menu=kontak">kontak</a></li>
+        <li><a href="?menu=akun">akun</a></li>
 </nav>
 <?php
-    if(isset($_POST['kirim'])){
-        $email=$_POST['email'];
-        $password=$_POST['password'];
-        echo $email;
-        echo '<br>';
-        echo $password;
+    if(isset($_GET['menu'])){
+        $menu=$_GET['menu'];
+       require_once $menu. '.php';
     }
 ?>
