@@ -1,16 +1,35 @@
-<form action="" method="get">
-   nama :
-   <input type="text" name="nama">
-   alamat :
-   <input type="text" name="alamat">
-   <input type="submit" name="kirim" value="simpan">
-</form>
+<nav>
+    <ul>
+        <li><a href="?menu=isi">isi</a></li>
+        <li><a href="?menu=hapus">hapus</a></li>
+        <li><a href="?menu=destroy">destroy</a></li>
+    </ul>
+</nav>
 <?php
-if(isset($_GET['kirim'])){
-$nama=$_GET['nama'];
-$alamat=$_GET['alamat'];
-echo $nama;
+session_start();
+var_dump($_SESSION);
 echo '<br>';
-echo $alamat;
+if(isset($_GET['menu'])){
+    $menu=$_GET['menu'];
+    echo $menu;
+    switch ($menu){
+        case 'isi' :
+            isiSession();
+            break;
+            case 'hapus' :
+                unset($_SESSION['user']);
+                break;
+                case 'destroy' :
+                    session_destroy();
+                    break;
+                    default :
+                    break;
+    }
+}
+echo '<br>';
+function isiSession(){
+    $_SESSION['user']='joni';
+    $_SESSION['nama']='joni yes papa';
+    $_SESSION['alamat']='konoha';
 }
 ?>
