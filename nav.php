@@ -1,9 +1,16 @@
+<nav>
+    <ul>
+        <li>kontak</li>
+        <li>akun</li>
+        <li>pribadi</li>
+    </ul>
+</nav>
 <?php
-$tulisan = ' saya belajar php';
-echo $tulisan.'<br>';
-$angka ='2019';
-echo 'tahun'.$angka.'<br>';
-var_dump($tulisan);
-echo'<br>';
-var_dump((int)$angka+2);
+    if(isset($_POST['kirim'])){
+        $email=$_POST['email'];
+        $password=$_POST['password'];
+        echo $email;
+        echo '<br>';
+        echo $password;
+    }
 ?>
