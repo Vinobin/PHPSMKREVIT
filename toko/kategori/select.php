@@ -2,6 +2,11 @@
 <h3><a href="http://localhost/PHPSMKREVIT/PHPSMKREVIT/toko/kategori/insert.php">tambah data</a></h3>
 <?php
 require_once "../function.php";
+
+if(isset($_GET['update'])){
+    $id=$_GET['update'];
+   require_once "update.php";
+}
 if (isset($_GET['hapus'])) {
     $id=$_GET['hapus'];
    require_once "delete.php";
@@ -34,6 +39,8 @@ echo '
 <tr>
    <th>no</th>
    <th>kategori</th>
+   <th>hapus</th>
+   <th>ubah</th>
 </tr>
 ';
 $no=$mulai;
@@ -42,6 +49,8 @@ if($jumlah>0){
         echo '<tr>';
         echo '<td>'.$row['id'].'</td>';
         echo '<td>'.$row['barang'].'</td>';
+        echo '<td><a href="?hapus='.$row['id'].'">'.'hapus'.'</a></td>';
+        echo '<td><a href="?ubah='.$row['id'].'">'.'ubah'.'</a></td>';
         echo '</tr>';
     }
 }
