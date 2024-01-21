@@ -2,6 +2,10 @@
 <h3><a href="http://localhost/PHPSMKREVIT/PHPSMKREVIT/toko/kategori/insert.php">tambah data</a></h3>
 <?php
 require_once "../function.php";
+if (isset($_GET['hapus'])) {
+    $id=$_GET['hapus'];
+   require_once "delete.php";
+}
 $sql="SELECT id FROM barang ";
 $result=mysqli_query($koneksi,$sql);
 $jumlahdata=mysqli_num_rows($result);
