@@ -1,4 +1,5 @@
 <div style="margin :auto; width:900px;">
+<h3><a href="http://localhost/PHPSMKREVIT/PHPSMKREVIT/toko/kategori/insert.php">tambah data</a></h3>
 <?php
 require_once "../function.php";
 $sql="SELECT id FROM barang ";
