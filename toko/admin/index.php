@@ -28,8 +28,7 @@
                 <li class="nav-item"><a class="nav-link" href="?f=kategori&m=select">kategori</a></li>
                 <li class="nav-item"><a class="nav-link" href="?f=nama&m=select">nama</a></li>
                 <li class="nav-item"><a class="nav-link" href="?f=pesan&m=select">pesan</a></li>
-                <li class="nav-item"><a class="nav-link" href="?f=pesandetail&m=select">pesan detail</a></li>
-                <li class="nav-item"><a class="nav-link" href="?f=user&m=select">user</a></li>
+                <li class="nav-item"><a class="nav-link" href="?f=pelanggan&m=select">pelanggan</a></li>
             </ul>
         </div>
         <div class="col-md-9">
