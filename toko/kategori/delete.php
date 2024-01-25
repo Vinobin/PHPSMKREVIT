@@ -1,7 +1,8 @@
 <?php
-require_once "../function.php";
-$sql="DELETE FROM barang WHERE id =$id";
-$result=mysqli_query($koneksi,$sql);
-echo $sql;
-header("http://localhost/PHPSMKREVIT/PHPSMKREVIT/toko/kategori/select.php");
+if(isset($_GET['id'])){
+    $id=$_GET['id'];
+    $sql="DELETE FROM barang WHERE id=$id";
+    $db->runSQL($sql);
+    header("location:?f=kategori&m=select");
+  
 ?>

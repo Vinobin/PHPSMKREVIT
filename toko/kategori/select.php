@@ -7,6 +7,9 @@ $halaman=$ceil($jumlahdata/$banyak);
   $no=1+$mulai;
   
 ?>
+<div class="float-left mr-4">
+  <a class="btn btn-primary" href="?f=kategori&m=insert" role="button">tambah data</a>
+</div>
 <h1>kategori</h1>
 <table class="table table-bordered w-50">
     <thead>
@@ -22,8 +25,8 @@ $halaman=$ceil($jumlahdata/$banyak);
         <tr>
            
             <td><?php echo $r['barang']?></td>
-            <td><?php echo $r['id']?></td>
-            <td><?php echo $r['id']?></td>
+            <td><a href="href="?f=kategori&m=delete&id=<?php echo $r['id']?>">delete</td>
+            <td><a href="href="?f=kategori&m=update&id=<?php echo $r['id']?>">update</td>
         </tr>
         <?php endforeach ?>
     </tbody>
