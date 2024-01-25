@@ -17,8 +17,10 @@ class DB{
     while ($row=mysqli_fetch_assoc($result)){
         $data[]=$row;
 
+    }if(!empty($data)){
+        return $data;
     }
-    return $data;
+    
    }
    public function getITEM($sql){
     $result=mysqli_query($this->koneksi, $sql);
