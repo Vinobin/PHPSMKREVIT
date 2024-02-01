@@ -7,9 +7,7 @@ $halaman=$ceil($jumlahdata/$banyak);
   $no=1+$mulai;
   
 ?>
-<div class="float-left mr-4">
-  <a class="btn btn-primary" href="?f=pelanggan&m=insert" role="button">tambah data</a>
-</div>
+
 <h1>pelanggan</h1>
 <table class="table table-bordered w-70 mt-4">
     <thead>
