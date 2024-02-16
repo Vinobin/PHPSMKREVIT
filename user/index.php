@@ -49,8 +49,10 @@ session_start();
 if (isset($_GET['f']) && isset($_GET['m'])){
     $f=$_GET['f'];
     $m=$_GET['m'];
-    $file='../'.$f.'/'.$m.'.php';
+    $file=$f.'/'.$m.'php';
     require_once $file;
+}else{
+    require_once "home/produk.php";
 }
             ?>
         </div>
