@@ -2,7 +2,7 @@
    $row=$db->getALL("SELECT * FROM barang ORDER BY kategori ASC");
  ?>  
 
-<h1>insert pesan</h1>
+
 <h3>insert pesan</h3>
 <div class="form-group">
     <form action="" method="post" enctype="multipart/form-data">

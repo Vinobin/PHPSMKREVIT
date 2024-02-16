@@ -4,7 +4,7 @@ if(isset($_GET['id'])){
      $sql="SELECT * FROM barang WHERE id=$id";
     $row=$db->getITEM($sql);
 }
-?>3>update kategori</h3>
+?><h3>update kategori</h3>
 <div class="form-group">
     <form action="" method="post">
         <div class="form-group w-50">
