@@ -19,7 +19,7 @@ session_start();
 <body>
     <div class="container">
        <div class="row">
-        <h2>TOKO KU</h2>
+        <h2><a href="index.php">TOKO KU</a></h2>
         <div class="col-md-3">
             <h3>toko</h3>
         </div>
@@ -39,7 +39,7 @@ session_start();
             <ul class="nav flex-column">
                 
                 <?php foreach($row as $r) : ?>
-                <li class="nav-item"><a class="nav-link" href="#"><?php echo $r['kategori']?></a></li>
+                <li class="nav-item"><a class="nav-link" href="?f=home&m=produk&id="<?php echo $r['idkategri']?>"><?php echo $r['kategori']?></a></li>
                 <?php endforeach ?>
             </ul>
             <?php }  ?>

@@ -2,8 +2,15 @@
 
 <div class="mt-4 mb-4">
 <?php
-$row=$db->getALL("SELECT * FROM barang ORDER BY kategori ASC");
-   
+if(isset($_GET['id'])){
+    $id=$_GET['id'];
+    $where ="WHERE id=$id";
+    $id="&id=".$id;
+    echo $where;
+}else{
+    $where="";
+    $id="";
+}
 ?>
  
 </div>
@@ -34,7 +41,7 @@ $halaman=$ceil($jumlahdata/$banyak);
     <div style="clear:both;">
 <?php
 for ($i=1; $i <=$halaman ; $i++) { 
-    echo '<a href="?f=home&m=produk&p='.$i.'">'.$i.'</a>';
+    echo '<a href="?f=home&m=produk&p='.$i.$id.'">'.$i.'</a>';
     echo '&nbsp &nbsp &nbsp';
 }
 ?>
