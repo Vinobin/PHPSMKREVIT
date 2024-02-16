@@ -21,6 +21,7 @@ $halaman=$ceil($jumlahdata/$banyak);
         </tr>
     </thead>
     <tbody>
+        <?php if(!empty($row)){ ?>
         <?php foreach($row as $r): ?>
         <tr>
            
@@ -29,6 +30,7 @@ $halaman=$ceil($jumlahdata/$banyak);
             <td><a href="href="?f=kategori&m=update&id=<?php echo $r['id']?>">update</td>
         </tr>
         <?php endforeach ?>
+        <?php } ?>
     </tbody>
 </table>
 <?php
