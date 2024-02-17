@@ -4,7 +4,10 @@ session_start();
   $db=new DB;
   $sql="SELECT * FROM tblkategori ORDER BY kategori";
   $row=$db->getALL($sql);
-  
+  if(isset($_GET['log'])){
+    session_destroy();
+    header("location:index.php")
+  }
 ?>
 
 <!DOCTYPE html>
@@ -28,12 +31,12 @@ session_start();
         <?php
         if(isset($_SESSION['pelanggan'])){
             echo '
-            <div class="float-right mt-4">logout</div>
-            <div class="float-right mt-4 mr-4">pelanggan</div>
+            <div class="float-right mt-4"><a href="?log=logout">logout</div>
+            <div class="float-right mt-4 mr-4">pelanggan : '.$_SESSION['pelanggan'].'</div>
             ';
         }else{
             echo '
-            <div class="float-right mt-4 mr-4">login</div>
+            <div class="float-right mt-4 mr-4"><a href="?f=home&m=login">login</a></div>
             <div class="float-right mt-4 mr-4"><a href="?f=home&m=daftar">daftar</a></div>
             ';
         }
