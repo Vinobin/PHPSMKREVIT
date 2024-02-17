@@ -32,7 +32,7 @@ session_start();
         if(isset($_SESSION['pelanggan'])){
             echo '
             <div class="float-right mt-4"><a href="?log=logout">logout</div>
-            <div class="float-right mt-4 mr-4">pelanggan : '.$_SESSION['pelanggan'].'</div>
+            <div class="float-right mt-4 mr-4">pelanggan :<a href="?f=home&m=beli"> '.$_SESSION['pelanggan'].'</a></div>
             ';
         }else{
             echo '
