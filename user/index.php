@@ -24,10 +24,20 @@ session_start();
             <h3>toko</h3>
         </div>
         <div class="col-md-9">
-             <div class="float-right mt-4">logout</div>
-             <div class="float-right mt-4 mr-4">pelanggan</div>
-             <div class="float-right mt-4 mr-4">daftar</div>
-             <div class="float-right mt-4 mr-4">logout</div>
+           
+        <?php
+        if(isset($_SESSION['pelanggan'])){
+            echo '
+            <div class="float-right mt-4">logout</div>
+            <div class="float-right mt-4 mr-4">pelanggan</div>
+            ';
+        }else{
+            echo '
+            <div class="float-right mt-4 mr-4">login</div>
+            <div class="float-right mt-4 mr-4"><a href="?f=home&m=daftar">daftar</a></div>
+            ';
+        }
+        ?>
 
         </div>
        </div>
