@@ -71,10 +71,18 @@
            
         }
         echo '<tr>
-        <td colspan=4><h3>GRAND TOTAL : </h3></td>
+        <td colspan=4<h3>GRAND TOTAL : </h3></td>
         <td><h3>'.$total.'</h3></td>
         </tr>';
         echo '</table>';
     }
+    function info(){
+        echo "<h4>terimakasih udah beli</h4>"
+?>
+<?php
+  if(!empty($total)){
 ?>
 <a class="btn btn-primary" href="?f=home&m=checkout&total=<?phpecho $total ?>" role="button">CHECKOUT</a>
+<?php 
+  }
+?>

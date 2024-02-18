@@ -12,6 +12,10 @@
   }else{
     insertOrderDetail($idorder);
   }
+  kosongkanSession();
+  header("location:?fhome&m=checkout");
+  }else{
+    info();
   }
   function idorder($sql){
     global $db;
@@ -44,6 +48,16 @@
                 $sql="INSERT INTO tblorderdetail VALUES ('',$idorder,$idmenu,$value,$harga)";
                $db->runSQL($sql);
             }
+           
+        }
+    }
+  }
+  function kosongkanSession(){
+    foreach ($_SESSION as $key=> $value){
+        id($key<> 'pelanggan' && $key<> 'idpelanggan'){
+            $id=substr($key,1);
+            unset ($_SESSION['_'.$id]);
+         
            
         }
     }
