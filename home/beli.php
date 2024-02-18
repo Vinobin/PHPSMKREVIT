@@ -3,6 +3,7 @@
     if(isset($_GET['hapus'])){
         $id=$_GET['hapus'];
         unset($_SESSION['_'.$id]);
+        header("location:?fhome&m=beli");
     }
     if(isset($_GET['tambah'])){
         $id=$_GET['tambah'];
