@@ -50,6 +50,8 @@ session_start();
             <div class="float-right mt-4"><a href="?log=logout">logout</div>
             <div class="float-right mt-4 mr-4">pelanggan : '.$_SESSION['pelanggan'].'</div>
             <div class="float-right mt-4 mr-4">cart ( :<a href="?f=home&m=beli"> '.cart().'</a>)</div>
+            <div class="float-right mt-4 mr-4"><a href ="?f=home&m=history"></a>history</a></div>
+            ';
             ';
         }else{
             echo '
