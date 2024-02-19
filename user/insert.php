@@ -35,12 +35,13 @@
  if(isset($_POST['simpan'])){
     $kategri=$_POST['user'];
     $email=$_POST['email'];
-    $password=$_POST['password'];
-    $konfirmasi=$_POST['konfirmasi'];
+    $password=hash('sha256'$_POST['password']);
+    $konfirmasi=hash('sha256'$_POST['konfirmasi']);
     $level=$_POST['level'];
     if($password===$konfirmasi){
         
     $sql="INSERT INTO user VALUES ('','$user','$email','$password','$level',1)";
+   
     $db->runSQL($sql);
     header("location:?f=user&m=select");
     } else {

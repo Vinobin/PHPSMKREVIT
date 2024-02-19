@@ -58,7 +58,7 @@ session_start();
                           break;
                           echo 'koki' :
                           echo '
-                          
+                        
                           <li class="nav-item"><a class="nav-link" href="?f=orderdetail&m=select">orderdetail</a></li>
                           ';
                           break
