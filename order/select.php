@@ -3,7 +3,7 @@
 $jumlahdata=$db->rowCOUNT("SELECT idorder FROM vorder ");
 $banyak=2;
 $halaman=$ceil($jumlahdata/$banyak);
-  $sql="SELECT * FROM vorder ORDER BY status ASC LIMIT $mulai,$banyak";
+  $sql="SELECT * FROM vorder ORDER BY status,idorder ASC LIMIT $mulai,$banyak";
   $row=$db->getALL($sql);
   $no=1+$mulai;
   
@@ -20,6 +20,8 @@ $halaman=$ceil($jumlahdata/$banyak);
             <th>tanggal</th>
             <th>total</th>
             <th>bayar</th>
+            <th>kembali</th>
+            <th>status</th>
            
         </tr>
     </thead>
@@ -38,6 +40,8 @@ $halaman=$ceil($jumlahdata/$banyak);
         <td><?php echo $r['pelanggan']?></td>
             <td><?php echo $r['tglorder']?></td>
             <td><?php echo $r['total']?></td>
+            <td><?php echo $r['bayar']?></td>
+            <td><?php echo $r['kembali']?></td>
           
           <?php echo $status;?>
         </tr>
