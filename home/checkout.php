@@ -38,7 +38,7 @@
   function insertOrderDetail($idorder=1){
     global $db;
     foreach ($_SESSION as $key=> $value){
-        id($key<> 'pelanggan' && $key<> 'idpelanggan'){
+        id($key<> 'pelanggan' && $key<> 'idpelanggan' && $key<> 'user' && $key<> 'level' && $key<> 'iduser'){
             $id=substr($key,1);
             $sql="SELECT * FROM tblmenu WHERE id=$id";
             $row=$db->getALL($sql);
